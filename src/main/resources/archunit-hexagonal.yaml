@@ -3,7 +3,7 @@ hexagonal:
   architecture:
     shared-kernel:
       fqdns:
-        - org.epo.cne.hexagonal.ref.app.shared..
+        - com.emedina.hexagonal.ref.app.shared..
       allowed-libraries:
         - java..
         - javax..
@@ -11,10 +11,10 @@ hexagonal:
         - lombok..
         - io.vavr..
         - org.apache.commons..
-        - org.epo.cne.sharedkernel..
+        - com.emedina.sharedkernel..
     domain:
       fqdns:
-        - org.epo.cne.hexagonal.ref.app.domain..
+        - com.emedina.hexagonal.ref.app.domain..
       allowed-libraries:
         - java..
         - javax..
@@ -22,11 +22,11 @@ hexagonal:
         - lombok..
         - io.vavr..
         - org.apache.commons..
-        - org.epo.cne.sharedkernel..
-        - org.epo.cne.hexagonal.ref.app.shared..
+        - com.emedina.sharedkernel..
+        - com.emedina.hexagonal.ref.app.shared..
     output-ports:
       fqdns:
-        - org.epo.cne.hexagonal.ref.app.application.ports.out..
+        - com.emedina.hexagonal.ref.app.application.ports.out..
       allowed-libraries:
         - java..
         - javax..
@@ -34,11 +34,11 @@ hexagonal:
         - lombok..
         - io.vavr..
         - org.apache.commons..
-        - org.epo.cne.sharedkernel..
-        - org.epo.cne.hexagonal.ref.app.shared..
+        - com.emedina.sharedkernel..
+        - com.emedina.hexagonal.ref.app.shared..
     input-ports:
       fqdns:
-        - org.epo.cne.hexagonal.ref.app.application.ports.in..
+        - com.emedina.hexagonal.ref.app.application.ports.in..
       allowed-libraries:
         - java..
         - javax..
@@ -46,13 +46,13 @@ hexagonal:
         - lombok..
         - io.vavr..
         - org.apache.commons..
-        - org.epo.cne.sharedkernel..
-        - org.epo.cne.hexagonal.ref.app.shared..
-        - org.epo.cne.hexagonal.ref.app.application.command..
-        - org.epo.cne.hexagonal.ref.app.application.query..
+        - com.emedina.sharedkernel..
+        - com.emedina.hexagonal.ref.app.shared..
+        - com.emedina.hexagonal.ref.app.application.command..
+        - com.emedina.hexagonal.ref.app.application.query..
     command:
       fqdns:
-        - org.epo.cne.hexagonal.ref.app.application.command..
+        - com.emedina.hexagonal.ref.app.application.command..
       allowed-libraries:
         - java..
         - javax..
@@ -60,11 +60,11 @@ hexagonal:
         - lombok..
         - io.vavr..
         - org.apache.commons..
-        - org.epo.cne.sharedkernel..
-        - org.epo.cne.hexagonal.ref.app.shared..
+        - com.emedina.sharedkernel..
+        - com.emedina.hexagonal.ref.app.shared..
     query:
       fqdns:
-        - org.epo.cne.hexagonal.ref.app.application.query..
+        - com.emedina.hexagonal.ref.app.application.query..
       allowed-libraries:
         - java..
         - javax..
@@ -72,11 +72,11 @@ hexagonal:
         - lombok..
         - io.vavr..
         - org.apache.commons..
-        - org.epo.cne.sharedkernel..
-        - org.epo.cne.hexagonal.ref.app.shared..
+        - com.emedina.sharedkernel..
+        - com.emedina.hexagonal.ref.app.shared..
     handler:
       fqdns:
-        - org.epo.cne.hexagonal.ref.app.application
+        - com.emedina.hexagonal.ref.app.application
       allowed-libraries:
         - java..
         - javax..
@@ -85,13 +85,15 @@ hexagonal:
         - io.vavr..
         - org.apache.commons..
         - org.mapstruct..
-        - org.epo.cne.sharedkernel..
-        - org.epo.cne.hexagonal.ref.app.shared..
-        - org.epo.cne.hexagonal.ref.app.domain..
-        - org.epo.cne.hexagonal.ref.app.application.ports.out..
-        - org.epo.cne.hexagonal.ref.app.application.ports.in..
-        - org.epo.cne.hexagonal.ref.app.application.command..
-        - org.epo.cne.hexagonal.ref.app.application.query..
+        - com.emedina.sharedkernel..
+        - com.emedina.hexagonal.ref.app.shared..
+        - com.emedina.hexagonal.ref.app.domain..
+        - com.emedina.hexagonal.ref.app.application.ports.out..
+        - com.emedina.hexagonal.ref.app.application.ports.in..
+        - com.emedina.hexagonal.ref.app.application.command..
+        - com.emedina.hexagonal.ref.app.application.query..
     adapters:
       fqdns:
-        - org.epo.cne.hexagonal.ref.app.api..
+        - com.emedina.hexagonal.ref.app.repositories..
+        - com.emedina.hexagonal.ref.app.external..
+        - com.emedina.hexagonal.ref.app.api..
