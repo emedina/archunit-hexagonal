@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.emedina.hexagonal</groupId>
@@ -9,7 +8,7 @@
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>CNE - ArchUnit Hexagonal</name>
+    <name>ArchUnit Hexagonal</name>
     <description>Unit test for Hexagonal Architecture</description>
 
     <scm>
@@ -20,18 +19,25 @@
     </scm>
 
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <java.version>24</java.version>
+        <maven.compiler.source>24</maven.compiler.source>
+        <maven.compiler.target>24</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
-        <versions-maven-plugin.version>2.17.1</versions-maven-plugin.version>
+        <!-- Enable full annotation processing for Lombok with JDK 24 -->
+        <maven.compiler.proc>full</maven.compiler.proc>
+
+        <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+        <versions-maven-plugin.version>2.18.0</versions-maven-plugin.version>
         <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
 
-        <lombok.version>1.18.34</lombok.version>
-        <spring-boot.version>3.3.4</spring-boot.version>
-        <archunit.version>1.3.0</archunit.version>
-        <junit-jupiter.version>5.11.2</junit-jupiter.version>
+        <spring-boot.version>3.5.0</spring-boot.version>
+        <vavr.version>0.10.6</vavr.version>
+        <lombok.version>1.18.38</lombok.version>
+        <mapstruct.version>1.6.3</mapstruct.version>
+        <archunit.version>1.4.1</archunit.version>
+
+        <shared-kernel.version>1.0.0</shared-kernel.version>
 
         <shared-kernel-domain.version>1.0.0</shared-kernel-domain.version>
         <shared-kernel-command-either-bus.version>1.0.0</shared-kernel-command-either-bus.version>
@@ -51,6 +57,11 @@
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.vavr</groupId>
+            <artifactId>vavr</artifactId>
+            <version>${vavr.version}</version>
         </dependency>
 
         <dependency>
@@ -88,6 +99,7 @@
                 <configuration>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
+                    <parameters>true</parameters>
                 </configuration>
             </plugin>
             <plugin>
@@ -102,6 +114,7 @@
                 <goals>
                     <goal>update-parent</goal>
                     <goal>update-properties</goal>
+                    <goal>update-dependencies</goal>
                 </goals>
             </plugin>
 
