@@ -30,10 +30,6 @@ The book provides in-depth coverage of:
 - Automated compliance checking approaches
 - Evolving architecture while maintaining constraints
 
----
-
-[Rest of existing README content]
-
 ## 🎯 Overview
 
 This project provides a comprehensive set of architectural tests and rules to validate that your application correctly implements the Hexagonal Architecture pattern. It uses ArchUnit to enforce boundaries between different layers of your application, ensuring that dependencies flow in the correct direction and that each component adheres to its designated responsibilities.
