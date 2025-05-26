@@ -1,5 +1,8 @@
 # 🔷 ArchUnit Hexagonal
 
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+![Java Version](https://img.shields.io/badge/Java-24-blue)
+
 A specialized testing library for enforcing Hexagonal Architecture (Ports and Adapters) patterns in Java applications using ArchUnit, ensuring clean separation of concerns and architectural compliance.
 
 ## 📚 Further Learning
