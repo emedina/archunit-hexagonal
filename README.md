@@ -2,6 +2,38 @@
 
 A specialized testing library for enforcing Hexagonal Architecture (Ports and Adapters) patterns in Java applications using ArchUnit, ensuring clean separation of concerns and architectural compliance.
 
+## 📚 Further Learning
+
+This implementation demonstrates patterns and principles thoroughly explored in:
+
+**English Version**  
+*Decoupling by Design: A Pragmatic Approach to Hexagonal Architecture*  
+
+- [PDF](https://leanpub.com/decouplingbydesignapractitionersguidetohexagonalarchitecture)  
+- [Kindle](https://a.co/d/4KwauyK)  
+- [Paperback](https://a.co/d/cGQI8gX)  
+
+**Versión en Español**  
+*Desacoplamiento por Diseño: Una Guía Práctica para la Arquitectura Hexagonal*  
+
+- [PDF](https://leanpub.com/desacoplamientopordiseounaguaprcticaparalaarquitecturahexagonal)  
+- [Kindle](https://amzn.eu/d/ic50CoH)  
+- [Tapa blanda](https://amzn.eu/d/1fHOpN6)  
+
+The book provides in-depth coverage of:
+
+- Architectural testing strategies for hexagonal systems
+- Dependency rule enforcement patterns
+- Layer isolation verification techniques
+- Real-world architecture validation case studies
+- Preventing architectural drift in large systems
+- Automated compliance checking approaches
+- Evolving architecture while maintaining constraints
+
+---
+
+[Rest of existing README content]
+
 ## 🎯 Overview
 
 This project provides a comprehensive set of architectural tests and rules to validate that your application correctly implements the Hexagonal Architecture pattern. It uses ArchUnit to enforce boundaries between different layers of your application, ensuring that dependencies flow in the correct direction and that each component adheres to its designated responsibilities.
