@@ -1,7 +1,7 @@
 # 🔷 ArchUnit Hexagonal
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
-![Java Version](https://img.shields.io/badge/Java-24-blue)
+![Java Version](https://img.shields.io/badge/Java-25-blue)
 
 A specialized testing library for enforcing Hexagonal Architecture (Ports and Adapters) patterns in Java applications using ArchUnit, ensuring clean separation of concerns and architectural compliance.
 
@@ -175,9 +175,9 @@ Each component also supports `allowed-libraries` to specify which external depen
 
 ## 🔧 Build Requirements
 
-- **Java 24+**
+- **Java 25+**
 - **Maven 3.9+**
-- **Spring Boot 3.5.0+**
+- **Spring Boot 4.0.1+**
 
 ## 🤝 Contributing
 
