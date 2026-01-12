@@ -106,7 +106,7 @@ public class OutputPortChecker {
      *
      * @return a list of package names representing the allowed libraries
      */
-    private static List<String> getAllowedLibraries() {
+    static List<String> getAllowedLibraries() {
         final List<String> defaultLibraries = Arrays.asList(
             "java..", "javax..", "lombok..", "io.vavr..", "org.apache.commons.."
         );
@@ -125,7 +125,7 @@ public class OutputPortChecker {
      * @param allowedLibraries the list of allowed library package names
      * @return an array of package names that the output ports are allowed to depend on
      */
-    private static String[] getAllowedPackages(final List<String> allowedLibraries) {
+    static String[] getAllowedPackages(final List<String> allowedLibraries) {
         final List<String> allowedPackages = new ArrayList<>(allowedLibraries);
         allowedPackages.addAll(properties.outputPorts().fqdns());
 

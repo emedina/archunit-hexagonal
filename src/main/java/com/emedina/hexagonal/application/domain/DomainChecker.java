@@ -109,7 +109,7 @@ public class DomainChecker {
      * @return an ArchCondition that can be used in ArchUnit rules to check for allowed annotations
      * or the absence of annotations.
      */
-    private static ArchCondition<JavaClass> haveAllowedAnnotationsOrNone() {
+    static ArchCondition<JavaClass> haveAllowedAnnotationsOrNone() {
         return new ArchCondition<JavaClass>("have allowed annotations or none") {
             @Override
             public void check(JavaClass item, ConditionEvents events) {
@@ -139,7 +139,7 @@ public class DomainChecker {
      *
      * @return a list of package names representing the allowed libraries
      */
-    private static List<String> getAllowedLibraries() {
+    static List<String> getAllowedLibraries() {
         final List<String> defaultLibraries = Arrays.asList(
             "java..", "javax..", "lombok..", "io.vavr..", "org.apache.commons.."
         );
@@ -158,7 +158,7 @@ public class DomainChecker {
      * @param allowedLibraries the list of allowed library package names
      * @return an array of package names that the domain is allowed to depend on
      */
-    private static String[] getAllowedPackages(final List<String> allowedLibraries) {
+    static String[] getAllowedPackages(final List<String> allowedLibraries) {
         final List<String> allowedPackages = new ArrayList<>(allowedLibraries);
         allowedPackages.addAll(properties.domain().fqdns());
 

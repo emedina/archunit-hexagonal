@@ -139,7 +139,7 @@ public class InputPortChecker {
      *
      * @return a list of package names representing the allowed libraries
      */
-    private static List<String> getAllowedLibraries() {
+    static List<String> getAllowedLibraries() {
         final List<String> defaultLibraries = Arrays.asList(
             "java..", "javax..", "lombok..", "io.vavr..", "org.apache.commons.."
         );
@@ -158,7 +158,7 @@ public class InputPortChecker {
      * @param allowedLibraries the list of allowed library package names
      * @return an array of package names that the input ports are allowed to depend on
      */
-    private static String[] getAllowedPackages(final List<String> allowedLibraries) {
+    static String[] getAllowedPackages(final List<String> allowedLibraries) {
         final List<String> allowedPackages = new ArrayList<>(allowedLibraries);
         allowedPackages.addAll(properties.inputPorts().fqdns());
 
@@ -187,7 +187,7 @@ public class InputPortChecker {
      * @return an {@link ArchCondition} that can be used to check whether a class's first generic type argument is assignable to the given expected type.
      * If the class does not have a type parameter that is assignable to the expected type, the condition will result in a violation.
      */
-    private static ArchCondition<JavaClass> haveGenericTypeAssignableTo(final Class<?> expectedType,
+    static ArchCondition<JavaClass> haveGenericTypeAssignableTo(final Class<?> expectedType,
         final Integer position) {
         return new ArchCondition<>("have a generic type assignable to " + expectedType.getSimpleName()) {
 

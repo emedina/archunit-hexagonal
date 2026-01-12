@@ -119,7 +119,7 @@ public class CommandChecker {
      *
      * @return an ArchCondition that can be used in ArchUnit rules to check for the validateThenCreate method.
      */
-    private static ArchCondition<JavaClass> haveValidateThenCreateMethod() {
+    static ArchCondition<JavaClass> haveValidateThenCreateMethod() {
         return new ArchCondition<>("have validateThenCreate method") {
             @Override
             public void check(JavaClass item, ConditionEvents events) {
@@ -147,7 +147,7 @@ public class CommandChecker {
      *
      * @return an ArchCondition that can be used in ArchUnit rules to check for the absence of a public default constructor.
      */
-    private static ArchCondition<JavaClass> notHavePublicDefaultConstructor() {
+    static ArchCondition<JavaClass> notHavePublicDefaultConstructor() {
         return new ArchCondition<>("not have public default constructor") {
             @Override
             public void check(JavaClass item, ConditionEvents events) {
@@ -172,7 +172,7 @@ public class CommandChecker {
      *
      * @return a list of package names representing the allowed libraries.
      */
-    private static List<String> getAllowedLibraries() {
+    static List<String> getAllowedLibraries() {
         final List<String> defaultLibraries = Arrays.asList(
             "java..", "javax..", "lombok..", "io.vavr..", "org.apache.commons.."
         );
@@ -191,7 +191,7 @@ public class CommandChecker {
      * @param allowedLibraries the list of allowed library package names.
      * @return an array of package names that the commands are allowed to depend on.
      */
-    private static String[] getAllowedPackages(final List<String> allowedLibraries) {
+    static String[] getAllowedPackages(final List<String> allowedLibraries) {
         final List<String> allowedPackages = new ArrayList<>(allowedLibraries);
         allowedPackages.addAll(properties.command().fqdns());
 

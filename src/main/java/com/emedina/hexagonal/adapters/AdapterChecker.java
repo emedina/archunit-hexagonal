@@ -73,7 +73,7 @@ public class AdapterChecker {
      *
      * @return a DescribedPredicate that can be used in ArchUnit rules to check for @Repository interface implementation.
      */
-    private static DescribedPredicate<JavaClass> implementRepositoryInterface() {
+    static DescribedPredicate<JavaClass> implementRepositoryInterface() {
         return new DescribedPredicate<>("implement a @Repository interface") {
             @Override
             public boolean test(JavaClass input) {
