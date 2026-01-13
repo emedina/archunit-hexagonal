@@ -7,6 +7,6 @@ import com.emedina.sharedkernel.query.core.QueryHandler;
  * A valid input port that extends QueryHandler with a Query type.
  */
 @UseCase
-public interface ValidQueryUseCase extends QueryHandler<String, SampleQuery> {
+public interface ValidQueryUseCase extends QueryHandler<Throwable, String, SampleQuery> {
 
 }

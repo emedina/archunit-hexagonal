@@ -53,7 +53,7 @@ Add the project as a dependency to your `pom.xml`:
 
 ```xml
 <dependency>
-    <groupId>com.emedina.hexagonal</groupId>
+    <groupId>io.github.emedina</groupId>
     <artifactId>archunit-hexagonal</artifactId>
     <version>1.0.0</version>
     <scope>test</scope>

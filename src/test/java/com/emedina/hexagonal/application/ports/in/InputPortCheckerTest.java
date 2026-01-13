@@ -29,33 +29,33 @@ class InputPortCheckerTest {
     class HaveGenericTypeAssignableToTest {
 
         @Test
-        @DisplayName("should be satisfied for CommandHandler with Command type at position 1")
+        @DisplayName("should be satisfied for CommandHandler with Command type at position 2")
         void shouldBeSatisfiedForCommandHandlerWithCommandType() {
             // Given
             JavaClasses classes = new ClassFileImporter().importClasses(ValidCommandUseCase.class);
-            ArchRule rule = classes().should(InputPortChecker.haveGenericTypeAssignableTo(Command.class, 1));
+            ArchRule rule = classes().should(InputPortChecker.haveGenericTypeAssignableTo(Command.class, 2));
 
             // When & Then
             assertThatCode(() -> rule.check(classes)).doesNotThrowAnyException();
         }
 
         @Test
-        @DisplayName("should be satisfied for QueryHandler with Query type at position 2")
+        @DisplayName("should be satisfied for QueryHandler with Query type at position 3")
         void shouldBeSatisfiedForQueryHandlerWithQueryType() {
             // Given
             JavaClasses classes = new ClassFileImporter().importClasses(ValidQueryUseCase.class);
-            ArchRule rule = classes().should(InputPortChecker.haveGenericTypeAssignableTo(Query.class, 2));
+            ArchRule rule = classes().should(InputPortChecker.haveGenericTypeAssignableTo(Query.class, 3));
 
             // When & Then
             assertThatCode(() -> rule.check(classes)).doesNotThrowAnyException();
         }
 
         @Test
-        @DisplayName("should be violated for CommandHandler when checking for Query type at position 1")
+        @DisplayName("should be violated for CommandHandler when checking for Query type at position 2")
         void shouldBeViolatedForCommandHandlerWhenCheckingQueryType() {
-            // Given - Checking if position 1 of CommandHandler is Query (it's Command, not Query)
+            // Given - Checking if position 2 of CommandHandler is Query (it's Command, not Query)
             JavaClasses classes = new ClassFileImporter().importClasses(ValidCommandUseCase.class);
-            ArchRule rule = classes().should(InputPortChecker.haveGenericTypeAssignableTo(Query.class, 1));
+            ArchRule rule = classes().should(InputPortChecker.haveGenericTypeAssignableTo(Query.class, 2));
 
             // When & Then
             assertThatThrownBy(() -> rule.check(classes))
@@ -64,11 +64,11 @@ class InputPortCheckerTest {
         }
 
         @Test
-        @DisplayName("should be violated for QueryHandler when checking for Command type at position 2")
+        @DisplayName("should be violated for QueryHandler when checking for Command type at position 3")
         void shouldBeViolatedForQueryHandlerWhenCheckingCommandType() {
-            // Given - Checking if position 2 of QueryHandler is Command (it's Query, not Command)
+            // Given - Checking if position 3 of QueryHandler is Command (it's Query, not Command)
             JavaClasses classes = new ClassFileImporter().importClasses(ValidQueryUseCase.class);
-            ArchRule rule = classes().should(InputPortChecker.haveGenericTypeAssignableTo(Command.class, 2));
+            ArchRule rule = classes().should(InputPortChecker.haveGenericTypeAssignableTo(Command.class, 3));
 
             // When & Then
             assertThatThrownBy(() -> rule.check(classes))
@@ -87,6 +87,7 @@ class InputPortCheckerTest {
             // The condition only adds violations when the position exists and type doesn't match
             assertThatCode(() -> rule.check(classes)).doesNotThrowAnyException();
         }
+
     }
 
 }

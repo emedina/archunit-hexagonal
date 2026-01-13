@@ -7,6 +7,6 @@ import com.emedina.sharedkernel.command.core.CommandHandler;
  * A valid input port that extends CommandHandler with a Command type.
  */
 @UseCase
-public interface ValidCommandUseCase extends CommandHandler<SampleCommand> {
+public interface ValidCommandUseCase extends CommandHandler<Throwable, SampleCommand> {
 
 }
